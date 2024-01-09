@@ -1,6 +1,7 @@
 import 'package:calculator_app/constant/colors.dart';
 import 'package:calculator_app/screens/widgets_data.dart';
 import 'package:calculator_app/widgets/button.dart';
+import 'package:calculator_app/widgets/cal_button.dart';
 import 'package:calculator_app/widgets/textfield.dart';
 import 'package:flutter/material.dart';
 
@@ -47,29 +48,28 @@ class HomeScreen extends StatelessWidget {
               ),
              Row(
                children: [
-                 Column(
-                   children: [
-                     Row(
-                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                       children: List.generate(3,(index) => buttonList [index + 12]),
-                     ),
-                     Row(
-                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                       children: List.generate(3,(index) => buttonList [index + 15]),
-                     ),
-                     ],
+                 Expanded(
+                   child: Column(
+                     children: [
+                       Row(
+                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                         children: List.generate(3,(index) => buttonList [index + 12]),
+                       ),
+                       SizedBox(
+                         height:20,
+                       ),
+                       Row(
+                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                         children: List.generate(3,(index) => buttonList [index + 15]),
+                       ),
+                       ],
+                   ),
                  ),
 
-
-                     Container(
-                       height: 160,
-                         width:70,
-                       decoration: BoxDecoration(
-                         color: AppColors.secondaryColor,
-                         borderRadius: BorderRadius.circular(40),),
-                       child: Center(child: Text("=",style: TextStyle(fontSize:20),)
-                       ) ,
-                     )
+                     SizedBox(
+                       width: 20,
+                     ),
+                const CalculateButton(),
                ],
              )
             ],
