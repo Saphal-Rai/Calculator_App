@@ -6,19 +6,14 @@ class CalculateButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  InkWell(
-      onTap:(){
-        //TODO: onTap 2
-      } ,
-      child: Container(
-        height: 160,
-        width:70,
-        decoration: BoxDecoration(
-          color: AppColors.secondaryColor,
-          borderRadius: BorderRadius.circular(40),),
-        child: Center(child: Text("=",style: TextStyle(fontSize:32),)
-        ) ,
-      ),
+    return  Container(
+      height: 160,
+      width:70,
+      decoration: BoxDecoration(
+        color: AppColors.secondaryColor,
+        borderRadius: BorderRadius.circular(40),),
+      child: Center(child: Text("=",style: TextStyle(fontSize:32),)
+      ) ,
     );
   }
 }
