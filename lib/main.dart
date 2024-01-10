@@ -1,6 +1,7 @@
 import 'package:calculator_app/constant/colors.dart';
 import 'package:calculator_app/provider/cal_provider.dart';
 import 'package:calculator_app/screens/home_screen.dart';
+import 'package:calculator_app/splash_screen.dart';
 import 'package:calculator_app/widgets/textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -18,7 +19,7 @@ class CalculatorApp extends StatelessWidget {
       child: MaterialApp(
         theme: ThemeData.dark(),
         debugShowCheckedModeBanner: false,
-        home: const HomeScreen(),
+        home: SplashScreen(),
       ),
     );
   }
