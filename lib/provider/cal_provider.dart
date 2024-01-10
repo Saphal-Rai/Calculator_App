@@ -22,8 +22,9 @@ class CalculatorProvider extends ChangeNotifier{
        break;
        default:
          compController.text += value;
-
    }
+  compController.selection =  TextSelection.fromPosition(
+      TextPosition (offset: compController.text.length));
  }
  compute(){
    String text = compController.text;
